@@ -1,0 +1,302 @@
+@import "partials/_fonts";
+@import "partials/_variables";
+@import "partials/_mixins";
+
+body{
+  background-color: $light-grey;
+  font-family: $body;
+}
+
+h1, h2, h3, h4{
+  font-family: $head;
+}
+
+h2{
+  color: $h2;
+  border-bottom: 2px dashed $picture-back;
+}
+
+#columns{
+  h3{
+    @include gradient-grey;
+  }
+}
+
+main{
+  border-radius: 0 0 10px 10px;
+}
+
+/* STYLING HOME CONTAINER ================================================== */
+.home.container{
+  @include gradient-red;
+  color: white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  i{
+    color: white;
+  }
+}
+
+/* STYLING TEAM ARTICLES ===================================================  */
+article{
+  padding-top: 1em;
+}
+
+.team.container {
+  h2{
+    text-shadow: 2px 2px 3px black;
+  }
+}
+
+#starburst{
+  background-color: $background;
+  padding: 1em 0;
+  // margin-bottom: 1em;
+}
+
+/* STYLING THE STARBURST PNGS */
+.starburst{
+  position: relative;
+  height: 150px;
+  img{
+    position: absolute;
+    top: -50px;
+    left: 4em;
+    z-index: 9;
+  } // close .img
+} // close .starburst class
+
+h3{
+  color: white;
+  text-shadow: 2px 2px 3px black;
+  border-radius: 8px;
+  padding: .18em;
+}
+
+h4{
+  color: $header-bg;
+}
+
+.container-fluid{
+  padding: 0;
+}
+
+/* FIXING THE HAMBURGER FOR MY DARK BACKGROUND. NEXT TIME TRY FONT AWESOME */
+.navbar-light .navbar-toggler {
+  border-color: white;
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* NAVBAR WHITE ===============START  */
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+  color: $form-bg;
+}
+
+.navbar-light .navbar-nav .show > .nav-link,
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav
+.nav-link.active {
+  color: white;
+}
+/* NAVBAR WHITE ===============END  */
+
+.main-image{
+  margin-top: 0;
+  background-color: $picture-back;
+  padding: 5%;
+}
+
+/*  STYLE THE CAROUSEL =====================  */
+#slideshow{
+  padding: 0;
+  h4{
+    color: $slideshow-header;
+  }
+}
+
+.carousel-caption{
+  color: white;
+  text-shadow: 3px 3px 5px black;
+}
+
+/* This is the lines underneath */
+.carousel-indicators li{
+background-color: orange;
+}
+
+.carousel-indicators li.active{
+  background-color: $picture-back;
+}
+
+/* YOU CAN REPLACE THE ICONS WITH FONT AWESOME.
+THE CAROUSEL CONTROLS AND THE HAMBURGER MENU COLLAPSE IF YOU WANT.
+EASIER TO COLOURIZE IT I THINK */
+
+.carousel-control-prev{
+  font-size: 1.5em;
+}
+
+.carousel-control-next{
+  font-size: 1.5em;
+}
+
+.mb-0 a{
+  color: $form-bg;
+}
+
+.mb-0 a:hover{
+  color: #ccc;
+}
+/* END STYLE CAROUSEL =====================  */
+
+header{
+  // background-color: $header-bg;
+  h1{
+    margin-bottom: 0;
+    width: 50%;
+    float: left;
+  } // close h1
+} // close header
+
+/* STYLE THE HEADER BACKGROUND =========================================== */
+.bg-light {
+  @include gradient-red;
+}
+
+/* I need to use a square image for this to be a circle I think */
+#goliath{
+  border-radius: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+#columns{
+  background-color:#fff;
+  p{
+    padding-top: 10px;
+  }
+}
+
+.clear{
+  clear: both;
+}
+
+/* STYLING CHRONOLOGY START =================================  */
+
+#chronology{
+  background-color: $form-bg;
+  margin-bottom: 20px;
+  border-radius: 0px 0px 20px 20px;
+  padding-bottom: 20px;
+}
+
+.list-group-item{
+  border: 2px dotted $picture-back;
+  margin: 2px 0;
+}
+
+.list-group-item.active {
+    color: #fff;
+    background-color: $header-bg;
+    border: 2px dotted $picture-back;
+}
+
+.tab-content>.active {
+    line-height: 1.2em;
+}
+
+/* GRADIENT FOR KBD REPLACEMENT. SHOULD LOOK NICER. */
+kbd{
+  display: block;
+  @include gradient-grey;
+}
+
+/* STYLING CHRONOLOGY END ================================= */
+
+/* CONTACT FORM STYLES BEGIN ============================================================= */
+.contact.container{
+  background-color: white;
+  padding-bottom: 10px;
+    h2{
+      text-shadow: 2px 2px 3px black;
+    } // close h2
+  } //close contact container
+
+form{
+  margin: 30px 0;
+  padding: 20px 0;
+  border-radius: 20px;
+  background-color: $form-bg;
+  box-shadow: 2px 2px 4px black;
+}
+
+p>i{
+  color: $contact-icons;
+}
+
+/* CONTACT FORM STYLES END ============================================================= */
+
+footer{
+  text-align: center;
+  color: white;
+  @include gradient-red;
+  height: 50px;
+  line-height: 50px;
+}
+
+@media (min-width: 768px) {
+
+  h2{
+    &.display-5 { // Put the display-3 class on here for bigger.
+      font-size: 4.5rem;
+      font-weight: 300;
+      line-height: 1.2;
+      // text-shadow: 2px 2px 4px black;
+    } // close faux .display-5
+  } // close h2
+
+  .home{
+    i{
+      display: block;
+      font-size: 4em;
+      float: left;
+      width: 8%;
+      height: 100px;
+    }// close i
+  } // close .home
+} // close tablet 768 and up media query
+
+@media (min-width: 992px) and (max-width: 1199px){
+  .starburst{
+    // position: relative;
+    height: 70px;
+    img{
+      position: absolute;
+      width: 80%;
+      top: -30px;
+      left: 6em;
+      z-index: 9;
+    } // close .img
+  } // close .starburst class
+}
+// close 992px to 1199px
+
+@media (min-width: 992px) {
+  .home{
+    i{
+      display: block;
+      font-size: 4em;
+      float: left;
+      width: 5%;
+    } // close i
+  } // close .home
+} // close desktop 992px
