@@ -82,6 +82,12 @@ h4{
   padding: 0;
 }
 
+/* STYLE THE HEADER BACKGROUND =========================================== */
+.bg-light {
+  @include gradient-red;
+}
+
+
 /* FIXING THE HAMBURGER FOR MY DARK BACKGROUND. NEXT TIME TRY FONT AWESOME */
 .navbar-light .navbar-toggler {
   border-color: white;
@@ -143,10 +149,12 @@ EASIER TO COLOURIZE IT I THINK */
 
 .carousel-control-prev{
   font-size: 1.5em;
+  text-shadow: 2px 2px 4px black;
 }
 
 .carousel-control-next{
   font-size: 1.5em;
+  text-shadow: 2px 2px 4px black;
 }
 
 .mb-0 a{
@@ -160,17 +168,13 @@ EASIER TO COLOURIZE IT I THINK */
 
 header{
   // background-color: $header-bg;
+  position: relative;
   h1{
     margin-bottom: 0;
     width: 50%;
     float: left;
   } // close h1
 } // close header
-
-/* STYLE THE HEADER BACKGROUND =========================================== */
-.bg-light {
-  @include gradient-red;
-}
 
 /* I need to use a square image for this to be a circle I think */
 #goliath{
@@ -254,7 +258,13 @@ footer{
 }
 
 @media (min-width: 768px) {
-
+  header{
+    ul{
+      position: absolute;
+      right: 10%;
+      bottom: 5px;
+    }
+  }
   h2{
     &.display-5 { // Put the display-3 class on here for bigger.
       font-size: 4.5rem;
